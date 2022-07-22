@@ -14,7 +14,6 @@ In addition, this project will include:
 * Instructions on how to use Treble Sheet
 * A Production README
 
-
 ## Wireframes
 
 ![Screen Shot 2022-07-21 at 8 01 54 PM](https://user-images.githubusercontent.com/105829857/180334421-2b1200d7-c62f-4022-9e48-2957c34354d1.png)
