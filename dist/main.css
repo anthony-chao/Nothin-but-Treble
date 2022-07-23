@@ -17,16 +17,36 @@ ul {
   flex-wrap: wrap;
   margin: 30px auto;
   width: 450px;
-  height: 155px;
+  height: 200px;
 }
 
 li {
   width: 150px;
-  height: 10px;
+  height: 15px;
   background: white;
   cursor: pointer;
 }
 
-.even-row {
-  border-bottom: 2px solid black;
+.odd-row {
+  position: relative;
+}
+
+.odd-row:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+}
+
+.odd-row:last-child:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
 }
