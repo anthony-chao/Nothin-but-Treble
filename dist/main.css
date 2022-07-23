@@ -13,7 +13,6 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  column-count: 13;
   flex-wrap: wrap;
   margin: 30px auto;
   width: 450px;
@@ -21,17 +20,18 @@ ul {
 }
 
 li {
+  display: inline-block;
   width: 150px;
   height: 15px;
   background: white;
   cursor: pointer;
 }
 
-.odd-row {
+.even-row {
   position: relative;
 }
 
-.odd-row:before {
+.even-row:before {
   content: "";
   display: block;
   width: 100%;
@@ -41,12 +41,10 @@ li {
   top: 50%;
 }
 
-.odd-row:last-child:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
+.movingNotes {
+  cursor: pointer;
+  position: relative;
+  height: 100px;
+  width: 50px;
+  z-index: 1000;
 }
