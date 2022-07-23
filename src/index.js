@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const rootEl = document.querySelector(".MusicSheet");
   new View(bars, rootEl);
 
-
   //drag and drop functionality
   const notes = document.querySelector(".movingNotes")
   const containers = document.querySelectorAll(".droppable")
@@ -43,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function dragLeave() {
     // this.className = 'container';
+      // this.removeChild(notes);     NEED TO FIND A WAY TO REMOVE APPENDED NOTE
   }
 
   function dragDrop() {

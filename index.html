@@ -15,68 +15,6 @@
 
         <figure class="MusicSheet"> </figure>
 
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Quarter_note_with_upwards_stem.svg/320px-Quarter_note_with_upwards_stem.svg.png?20210123112410" id="note"
-        height = 96px; width = 35px>
-
-        <script>
-          let currentDroppable = null;
-                
-          note.onmousedown = function(event) {
-          
-            let shiftX = event.clientX - note.getBoundingClientRect().left;
-            let shiftY = event.clientY - note.getBoundingClientRect().top;
-      
-            note.style.position = 'absolute';
-            note.style.zIndex = 1000;
-            document.body.append(note);
-      
-            moveAt(event.pageX, event.pageY);
-      
-            function moveAt(pageX, pageY) {
-              note.style.left = pageX - shiftX + 'px';
-              note.style.top = pageY - shiftY + 'px';
-            }
-      
-            function onMouseMove(event) {
-              moveAt(event.pageX, event.pageY);
-      
-              note.hidden = true;
-              let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-              note.hidden = false;
-      
-              if (!elemBelow) return;
-      
-              let droppableBelow = elemBelow.closest('.droppable');
-              if (currentDroppable != droppableBelow) {
-                if (currentDroppable) { // null when we were not over a droppable before this event
-                  leaveDroppable(currentDroppable);
-                }
-                currentDroppable = droppableBelow;
-                if (currentDroppable) { // null if we're not coming over a droppable now
-                  // (maybe just left the droppable)
-                  enterDroppable(currentDroppable);
-                }
-              }
-            }
-      
-            document.addEventListener('mousemove', onMouseMove);
-      
-            note.onmouseup = function() {
-              document.removeEventListener('mousemove', onMouseMove);
-              note.onmouseup = null;
-            };
-      
-          };
-      
-          function leaveDroppable(elem) {
-            elem.style.background = '';
-          }
-      
-          note.ondragstart = function() {
-            return false;
-          };
-        </script> -->
-
     </div>
   </body>
 
