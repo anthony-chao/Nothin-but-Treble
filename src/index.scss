@@ -1,7 +1,53 @@
-#main {
-    color: red;
-}
+html, body, figure, figcaption, ul, li, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+  }
 
-#main > h1 {
-    border: 3px solid red; 
-}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    column-count: 13;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 450px;
+    height: 155px;
+    // border: 2px solid black;
+  }
+  
+  li {
+    width: 150px;
+    height: 10px;
+    // border: 1px solid black;
+    background: white;
+    cursor: pointer;
+  }
+
+  .even-row {
+    // border: 2px solid black;
+    // border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    // text-decoration: line-through;
+    
+  }
+
+//   .even-row:last-child {
+//     border-bottom: 2px solid black;
+//   }
+// .even-row {
+//     border-collapse: collapse;
+// }
+
+// .odd-row .even-row { position: relative; }
+
+// .odd-row .even-row:before {
+//   content: " ";
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   border-bottom: 1px solid black;
+//   width: 100%;
+// }
