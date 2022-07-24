@@ -29,6 +29,11 @@ class View {
           beat.classList.add("droppable");
         }
       }
+
+      const cleff = document.createElement('img');
+      cleff.src = "http://assets.stickpng.com/images/5a02cb3018e87004f1ca43e5.png"
+      cleff.classList.add("cleff");
+      bar.append(cleff);
   
       this.el.append(bar);
   
@@ -40,6 +45,7 @@ class View {
       quarterNote.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/BlackNotehead.svg/1170px-BlackNotehead.svg.png"
       quarterNote.classList.add("movingNotes");
       quarterNote.setAttribute("draggable", true);
+      quarterNote.setAttribute("id","note");
       this.el.append(quarterNote);
     }
   }

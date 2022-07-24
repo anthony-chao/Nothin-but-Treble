@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   new View(bars, rootEl);
 
   //drag and drop functionality
-  const notes = document.querySelector(".movingNotes")
+  const note = document.querySelector(".movingNotes")
   const containers = document.querySelectorAll(".droppable")
+  let draggableNote = null;
 
   // Notes Listeners
-  notes.addEventListener("dragstart", dragStart);
-  notes.addEventListener("dragend", dragEnd);
+    note.addEventListener("dragstart", dragStart);
+    note.addEventListener("dragend", dragEnd);
 
   // Loop through containers (droppable places) and call drag events
   for (const container of containers) {
@@ -24,12 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   //Drag Functions
-  function dragStart() {
-    console.log('start');
+  function dragStart(e) {
+    draggableNote = this;
+    e.dataTransfer.setData("text", e.target.id);
   }
   
   function dragEnd() {
-    console.log('end');
+    draggableNote = null;
   }
 
   function dragOver(e) {
@@ -38,16 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function dragEnter(e) {
     e.preventDefault();
+    // this.style.border = "1px dashed #ccc";      //This adds a border to the containers everytime you're dragging the element
   }
 
   function dragLeave() {
-    // this.className = 'container';
-      // this.removeChild(notes);     NEED TO FIND A WAY TO REMOVE APPENDED NOTE
+    // this.style.border = "none";       
   }
 
-  function dragDrop() {
-    // this.className = 'container';
-    this.append(notes);
+  function dragDrop(e) {
+    // this.style.border = "none";    
+    e.preventDefault();
+    let data = e.dataTransfer.getData("text");
+    let nodeCopy = document.getElementById(data).cloneNode(true);
+    this.appendChild(nodeCopy);
+    e.stopPropagation();
+    return false;
   }
 });
 
