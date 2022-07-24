@@ -65,24 +65,26 @@ class Sheet {
       const bar = document.createElement("ul");
   
       for (let column = 0; column < 4; column++) {
+        const beat = document.createElement("li");
         for (let row = 0; row < 13; row++) {
-          const beat = document.createElement("li");
-          beat.dataset.pos = JSON.stringify([column, row])
-          bar.append(beat);
+          const note = document.createElement("div");
+          note.dataset.pos = JSON.stringify([column, row])
+          beat.append(note);
           if (row % 2 === 0 && row != 0 && row != 12) {
-            beat.classList.add("even-row");
+            note.classList.add("even-row");
           }
           else if (row === 0) {
-            beat.classList.add("first-row")
+            note.classList.add("first-row")
           }
           else if (row === 12) {
-            beat.classList.add("last-row")
+            note.classList.add("last-row")
           }
           else {
-            beat.classList.add("odd-row");
+            note.classList.add("odd-row");
           }
-          beat.classList.add("droppable");
+          note.classList.add("droppable");
         }
+        bar.append(beat);
       }
 
       const cleff = document.createElement('img');

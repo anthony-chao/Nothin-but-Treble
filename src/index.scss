@@ -20,24 +20,41 @@ ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 15px auto;
+    margin: 55px auto;
     width: 450px;
     height: 200px;
-    // border: 2px solid black;
   }
-  
+
   li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  li:nth-child(4) > div {
+    border-right: 2px solid black;
+  }
+
+  li:nth-child(4) > div:nth-child(-n+2) {
+    border-right: none;
+  }
+
+  li:nth-child(4) > div:nth-last-child(-n + 2) {
+    border-right: none;
+  }
+
+  
+  li div{
     display: inline-block;
     width: 150px;
     height: 15px;
-    // border: 1px solid black;
     background: white;
     cursor: pointer;
   }
 
 .even-row {
     position: relative;
-}
+  }
 
 .even-row:before{
     content: "";
@@ -47,9 +64,9 @@ ul {
     background-color: black;
     position: absolute;
     top: 50%;
-}
+  }
 
-li > .movingNotes {
+li > div > .movingNotes {
   cursor: pointer;
   position: relative;
   left: 50%;
@@ -57,25 +74,23 @@ li > .movingNotes {
   width: 22px;
   z-index: 1000;
   margin-left: 0px;
-}
+  }
 
 .movingNotes {
   margin-left: 200px;
   height: 22px;
   width: 22px;
-}
+  }
 
 .cleff {
   position: absolute;
   left: 440px;
   height: 200px;
   width: 120px;
-}
+  }
 
-// #noteStem {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   height: 80px;
-//   width: 50px;
-// }
+#noteStem {
+  position: absolute;
+  height: 80px;
+  width: 50px;
+  }
