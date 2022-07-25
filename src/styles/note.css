@@ -1,0 +1,29 @@
+li > div > .movingNotes {
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    height: 100px;
+    width: 40px;
+    z-index: 1000;
+    margin-left: 0px;
+    bottom: 75px;
+}
+
+.movingNotes {
+    margin-left: 200px;
+    height: 100px;
+    width: 40px;
+}
+  
+.aboveA > #img {
+    height: 100px;
+    width: 40px;
+    bottom: 5px;
+    content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Figure_rythmique_noire_hampe_bas.svg/365px-Figure_rythmique_noire_hampe_bas.svg.png")
+}
+
+#noteStem {
+    position: absolute;
+    height: 80px;
+    width: 50px;
+}
