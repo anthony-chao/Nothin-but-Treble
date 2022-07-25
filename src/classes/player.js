@@ -1,15 +1,16 @@
 class Player {
 
-    constructor(music){
-        this.music = music;
-        this.lastTime = Date.now();
-        this.step = 0;
+    constructor(){
 
         this.containers = document.querySelectorAll('.droppable');
+
     }
 
-    resetMusic(){
-        this.step = 0;
+    resetMusicSheet(){
+        const images = document.querySelectorAll('#img');
+        for (const image of images) {
+            image.parentNode.removeChild(image);
+        }
     }
 
     playMusic() {
@@ -41,15 +42,10 @@ class Player {
             (function(i) {
                 setTimeout(function() {
                     rowToNote[notesToBePlayed[i]].play();
+                    console.log(rowToNote[notesToBePlayed[i]]);
                 }, 500 * i);
             })(i);
         }
-        
-        
-        // let singleNote = document.getElementById('3c');
-        // let secondNote = document.getElementById('3d');
-        // singleNote.play();
-        console.log(notesToBePlayed);           //this returns an array of the rows
         
     }
 }

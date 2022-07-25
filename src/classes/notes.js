@@ -29,6 +29,8 @@ class Notes {
         quarterNoteHead.setAttribute("draggable", true);
         quarterNoteHead.setAttribute("id","note");
         createNote.append(quarterNoteHead);
+
+        // this creates the stem that should be attached to the head
         const quarterNoteStem = document.createElement("img");
         quarterNoteStem.src = "https://static.thenounproject.com/png/657409-200.png"
         quarterNoteStem.setAttribute("id", "noteStem");

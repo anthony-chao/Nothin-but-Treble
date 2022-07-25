@@ -20,11 +20,9 @@ class Sheet {
 
       function dragEnter(e) {
         e.preventDefault();
-        // this.style.border = "1px dashed #ccc";      //This adds a border to the containers everytime you're dragging the element
       }
 
       function dragLeave() {
-        // this.style.border = "none";       
       }
 
       function removeNode(node) {
@@ -32,17 +30,16 @@ class Sheet {
       }
 
       function dragDrop(e) {
-        // this.style.border = "none";        //unnecessary
         console.log(e);
         console.log(e.target.nodeName);
         e.preventDefault();
         let data = e.dataTransfer.getData("text");
         let nodeCopy = document.getElementById(data).cloneNode(true);   //need to add IF statement in here depending on originating space (if original had container, don't make clone)
 
-        var isLeft = 'note' == data               //this entire code below makes it so if you drag a note to the same spot, it just replaces it
+        var isLeft = 'note' === data               //this entire code below makes it so if you drag a note to the same spot, it just replaces it
         nodeCopy.id = "img" + e.target.id;
         if (isLeft) {
-          if (e.target.nodeName == 'IMG') {
+          if (e.target.nodeName === 'IMG') {
             e.target.parentNode.appendChild(nodeCopy);
             removeNode(e.target);
           }
@@ -64,11 +61,19 @@ class Sheet {
     setupSheet() {
       const bar = document.createElement("ul");
   
-      for (let column = 0; column < 4; column++) {
+      for (let column = 0; column < 12; column++) {
         const beat = document.createElement("li");
+        if (column >= 0 && column < 4) {
+          beat.classList.add("first-bar");
+        }
+        else if (column >= 4 && column < 8) {
+          beat.classList.add("second-bar");
+        }
+        else {
+          beat.classList.add("third-bar");
+        }
         for (let row = 0; row < 13; row++) {
           const note = document.createElement("div");
-          // note.dataset.pos = JSON.stringify([column, row])
           note.dataset.column = column;
           note.dataset.row = row;
           beat.append(note);
