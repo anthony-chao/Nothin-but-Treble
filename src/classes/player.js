@@ -14,50 +14,44 @@ class Player {
 
     playMusic() {
 
+        const rowToNote = new Object();
+        rowToNote[0] = document.getElementById('5a');
+        rowToNote[1] = document.getElementById('4g');
+        rowToNote[2] = document.getElementById('4f');
+        rowToNote[3] = document.getElementById('4e');
+        rowToNote[4] = document.getElementById('4d');
+        rowToNote[5] = document.getElementById('4c');
+        rowToNote[6] = document.getElementById('4b');
+        rowToNote[7] = document.getElementById('4a');
+        rowToNote[8] = document.getElementById('3g');
+        rowToNote[9] = document.getElementById('3f');
+        rowToNote[10] = document.getElementById('3e');
+        rowToNote[11] = document.getElementById('3d');
+        rowToNote[12] = document.getElementById('3c');
+
+        const notesToBePlayed = [];
+
         for (const container of this.containers) {
             if (container.children.length !== 0) {
-                console.log(container.dataset.pos)
+                notesToBePlayed.push(container.dataset.row);
             }
         }
+
+        for (let i = 0; i < notesToBePlayed.length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    rowToNote[notesToBePlayed[i]].play();
+                }, 500 * i);
+            })(i);
+        }
         
-
-        // for (let i = 0; i < this.instrumentSeqs.length; i++) {
-        //     let instrumentDivs = this.instrumentSeqs[i].children;
-        //     let instrumentBoxes = [];
-        //     for(let divIndex = 0; divIndex < instrumentDivs.length; divIndex++){
-        //         instrumentBoxes.push(instrumentDivs[divIndex].children[0]);
-        //     }
-        //     let instrumentBox = instrumentBoxes[step];
-        //     let toHighlight = this.instrumentLabs[i].children[3].children[step];
-        //     toHighlight.classList.add("playing");
-        //     let toUnHighlight = this.instrumentLabs[i].children[3].children[(this.beatsInfo.totalSteps+step-1)%this.beatsInfo.totalSteps];
-        //     toUnHighlight.classList.remove("playing");
-            
-
-        //     if(instrumentBox.checked){
-        //         let audioNamePlural = this.instrumentSeqs[i].id
-        //         let audioNameSingular = audioNamePlural.slice(0,audioNamePlural.length-1);
-        //         let audioName = audioNamePlural.slice(0, audioNamePlural.length-1)+'1';
-        //         let audioSelector = document.getElementById(`${audioNameSingular}Selector`);
-        //         var audio = document.getElementById(`${audioSelector.value}`);
-        //         var masterVol = document.getElementById('masterVol');
-        //         var instrumentVol = document.getElementById(`${audioNameSingular}Vol`);
-        //         audio.currentTime = 0;
-        //         audio.volume = (0.01 * masterVol.value)*(0.01 * instrumentVol.value);
-        //         audio.play();
-        //     }
-        // }
+        
+        // let singleNote = document.getElementById('3c');
+        // let secondNote = document.getElementById('3d');
+        // singleNote.play();
+        console.log(notesToBePlayed);           //this returns an array of the rows
+        
     }
-
-    // unHighlightAll(){
-    //     for(let i = 0; i < this.instrumentLabs.length; i++){
-    //         let toUnHighlight = this.instrumentLabs[i].children[3];
-    //         for(let j = 0; j < toUnHighlight.children.length; j++){
-    //             toUnHighlight.children[j].classList.remove("playing");
-    //         }
-    //     }
-    // }
-
 }
 
 export default Player;

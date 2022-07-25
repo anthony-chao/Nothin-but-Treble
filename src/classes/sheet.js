@@ -68,7 +68,9 @@ class Sheet {
         const beat = document.createElement("li");
         for (let row = 0; row < 13; row++) {
           const note = document.createElement("div");
-          note.dataset.pos = JSON.stringify([column, row])
+          // note.dataset.pos = JSON.stringify([column, row])
+          note.dataset.column = column;
+          note.dataset.row = row;
           beat.append(note);
           if (row % 2 === 0 && row != 0 && row != 12) {
             note.classList.add("even-row");
