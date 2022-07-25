@@ -37,6 +37,7 @@ class Player {
                 notesToBePlayed.push(container.dataset.row);
             }
         }
+        
 
         for (let i = 0; i < notesToBePlayed.length; i++) {
             (function(i) {
@@ -46,8 +47,8 @@ class Player {
                 }, 500 * i);
             })(i);
         }
-        
     }
+
 }
 
 export default Player;

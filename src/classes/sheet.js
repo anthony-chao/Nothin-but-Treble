@@ -30,7 +30,7 @@ class Sheet {
       }
 
       function dragDrop(e) {
-        console.log(e);
+        console.log(e.parentNode);
         console.log(e.target.nodeName);
         e.preventDefault();
         let data = e.dataTransfer.getData("text");
@@ -52,6 +52,7 @@ class Sheet {
             e.target.appendChild(nodeCopy);
           }
         }
+        
         e.stopPropagation();
         return false;
 
@@ -90,6 +91,9 @@ class Sheet {
             note.classList.add("odd-row");
           }
           note.classList.add("droppable");
+          if (row <= 6) {
+            note.classList.add("aboveA");
+          }
         }
         bar.append(beat);
       }

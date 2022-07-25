@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   playButton.addEventListener('click', player.playMusic.bind(player));
   const resetButton = document.getElementById('resetButton');
   resetButton.addEventListener('click', player.resetMusicSheet.bind(player));
+  const stopButton = document.getElementById('stopButton');
+  stopButton.addEventListener('click', player.stopMusic.bind(player));
 });
 
 
