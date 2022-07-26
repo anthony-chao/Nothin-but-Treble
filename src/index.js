@@ -10,11 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const player = new Player();
   const selectInstrument = document.getElementById('instrumentSelector');
   const playButton = document.getElementById('playButton');
-
-  let instrument = "piano";   //this keeps getting reassigned to piano
-  playButton.addEventListener('click', player.playMusic.bind(player, 'piano'));
-  selectInstrument.addEventListener('change',function () { console.log(instrument); instrument = this.value; console.log(instrument);} ,false); 
-  playButton.addEventListener('click', player.playMusic.bind(player, instrument));
+  let instruments = {saxophone:'saxophone', clarinet:'clarinet', trumpet:'trumpet'}
+  let instrument = instruments.saxophone;   //this keeps getting reassigned to piano
+  selectInstrument.addEventListener('change',function () { 
+    console.log(instrument);
+    instrument = instruments[this.value];
+    console.log(instrument);} ,
+  false); 
+  console.log(instrument);
+  playButton.addEventListener('click', () => {
+    player.instrument = instrument;
+    player.playMusic(player.instrument);
+  });
 
   const resetButton = document.getElementById('resetButton');
   resetButton.addEventListener('click', player.resetMusicSheet.bind(player));
