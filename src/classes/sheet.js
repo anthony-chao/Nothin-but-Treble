@@ -1,4 +1,5 @@
 class Sheet {
+
     constructor(el) {
       this.el = el;
       this.setupSheet();
@@ -29,10 +30,20 @@ class Sheet {
         node.parentNode.removeChild(node);
       }
 
+      let countObject = {};
+
       function dragDrop(e) {
-        console.log(e.parentNode);
-        console.log(e.target.nodeName);
+        console.log(e.target.dataset.column);
+        console.log(e.target.parentNode);   //e.target.parentNode gives you the class (first-bar, second-bar, etc. )
+        console.log(countObject);
+
         e.preventDefault();
+
+        if (countObject.hasOwnProperty(e.target.dataset.column)) {
+          // countObject[e.target.dataset.column] += 1;
+          throw new Error('There is already a note in this beat!')
+        }
+
         let data = e.dataTransfer.getData("text");
         let nodeCopy = document.getElementById(data).cloneNode(true);   //need to add IF statement in here depending on originating space (if original had container, don't make clone)
 
@@ -52,12 +63,20 @@ class Sheet {
             e.target.appendChild(nodeCopy);
           }
         }
-        
+        countObject[e.target.dataset.column] = 1;
         e.stopPropagation();
         return false;
-
       }
+
+      function resetCountObject() {
+        for (let member in countObject) { delete countObject[member]};
+      }
+
     }
+
+    // resetCountObject() {
+    //   for (let member in countObject) { delete countObject[member]};
+    // }
     
     setupSheet() {
       const bar = document.createElement("ul");

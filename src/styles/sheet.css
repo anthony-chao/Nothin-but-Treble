@@ -33,7 +33,7 @@ ul {
     width: 100px;
     height: 15px;
     background: white;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
 .even-row {

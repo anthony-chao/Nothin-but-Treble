@@ -81,13 +81,14 @@ li > div > .movingNotes {
     margin-left: 200px;
     height: 100px;
     width: 40px;
+    cursor: grab;
 }
   
 .aboveA > #img {
     height: 100px;
     width: 40px;
     bottom: 5px;
-    content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Figure_rythmique_noire_hampe_bas.svg/365px-Figure_rythmique_noire_hampe_bas.svg.png")
+    content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Figure_rythmique_noire_hampe_bas.svg/365px-Figure_rythmique_noire_hampe_bas.svg.png");
 }
 
 #noteStem {
@@ -133,7 +134,7 @@ ul {
     width: 100px;
     height: 15px;
     background: white;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
 .even-row {

@@ -1,3 +1,5 @@
+import Sheet from "./sheet";
+
 class Player {
 
     constructor(){
@@ -8,9 +10,12 @@ class Player {
 
     resetMusicSheet(){
         const images = document.querySelectorAll('#img');
+
         for (const image of images) {
             image.parentNode.removeChild(image);
         }
+
+        Sheet.resetCountObject();
     }
 
     playMusic() {
