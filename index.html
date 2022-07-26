@@ -15,6 +15,19 @@
 
         <button id="playButton">Play</button>
         <button id="resetButton">Reset Music Sheet</button>
+        
+        <label for="">Instrument Selector</label>
+        <select name="instrumentSelector" id="instrumentSelector">
+          <option value="piano" selected="select">Piano</option>
+          <option value="trumpet">Trumpet</option>
+          <option value="clarinet">Clarinet</option>
+        </select>
+
+        <button id="songName">Song Name</button>
+        
+        <p>
+          <span id="outputName"></span>
+        </p>
 
         <figure class="MusicSheet"> </figure>
         
@@ -35,7 +48,8 @@
         </ul>
 
         <ul class = 'TrumpetNotes'>
-          <audio src="./src/classes/trumpet/trumpet-3d.mp3" id="trumpet3c"></audio>
+          <audio src="./src/classes/trumpet/trumpet-3c.mp3" id="trumpet3c"></audio>
+          <audio src="./src/classes/trumpet/trumpet-3d.mp3" id="trumpet3d"></audio>
           <audio src="./src/classes/trumpet/trumpet-3e.mp3" id="trumpet3e"></audio>
           <audio src="./src/classes/trumpet/trumpet-3f.mp3" id="trumpet3f"></audio>
           <audio src="./src/classes/trumpet/trumpet-3g.mp3" id="trumpet3g"></audio>
@@ -48,6 +62,13 @@
           <audio src="./src/classes/trumpet/trumpet-4g.mp3" id="trumpet4g"></audio>
           <audio src="./src/classes/trumpet/trumpet-5a.mp3" id="trumpet5a"></audio>
         </ul>
+
+        <script>
+          document.getElementById("songName").onclick = function(){
+            var name = prompt("Enter your own song name!");
+            document.getElementById("outputName").innerText = name;
+          }
+        </script>
 
     </div>
   </body>
