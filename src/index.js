@@ -5,17 +5,20 @@ const Player = require("./classes/player.js").default;
 document.addEventListener("DOMContentLoaded", () => {
 
   const rootEl = document.querySelector(".MusicSheet");
-  const sheet = new Sheet(rootEl);
+  let sheet = new Sheet(rootEl);
   const notes = new Notes(rootEl);
   const player = new Player();
-  // const selectInstrument = document.getElementById('instrumentSelector');
-  // let instrument = "piano";
-  // selectInstrument.addEventListener('change',function () { instrument = this.value;} ,false); 
+  const selectInstrument = document.getElementById('instrumentSelector');
   const playButton = document.getElementById('playButton');
-  playButton.addEventListener('click', player.playMusic.bind(player));
+
+  let instrument = "piano";   //this keeps getting reassigned to piano
+  playButton.addEventListener('click', player.playMusic.bind(player, 'piano'));
+  selectInstrument.addEventListener('change',function () { console.log(instrument); instrument = this.value; console.log(instrument);} ,false); 
+  playButton.addEventListener('click', player.playMusic.bind(player, instrument));
+
   const resetButton = document.getElementById('resetButton');
   resetButton.addEventListener('click', player.resetMusicSheet.bind(player));
-  resetButton.addEventListener('click', sheet.resetCountObject);
+  // resetButton.addEventListener('click', sheet.resetCountObject);
 });
 
 
