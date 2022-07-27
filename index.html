@@ -6,30 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
-    <title>Treble Sheet</title>
+    <title>Nothin' but Treble | A Treblesome Music Sheet</title>
+    <link rel="icon" href="./src/images/treble-icon.png" sizes="32x32" type="image/png">
   </head>
 
   <body>
     <div>
         <div class="wrapper">
+          <button id="instructionsButton">Instructions</button>
+          <span id="instructionsPopUp">Welcome to Nothin' but Treble! Grab a Quarter Note and place it on the Music Sheet.
+            You can only place one note on each beat. Once you're satisfied with your notes, select an instrument and click Play.
+            Name your masterpiece after you're done!
+          </span>
           <div class="neon-wrapper">
-            <div class="neon-text">TREBLE <br>SHEET</div>
+            <div class="neon-text">Nothin' <br>but Treble</div>
           </div>
           <div class="note-box">
           <figure class="Notes"></figure>
           </div>
+          <a href="https://github.com/anthony-chao" target="_blank" rel="noopener noreferrer" id="github">
+            <img src="./src/images/github-logo.png" alt=""
+            height="50px" width="50px">
+          </a>
+          <a href="https://www.linkedin.com/in/anthony-chao-cpa-983299133/" target="_blank" rel="noopener noreferrer" id="linkedin">
+            <img src="./src/images/linkedin-logo.png" alt=""
+            height="50px" width="50px">
+          </a>
         </div>
 
         <figure class="MusicSheet"> </figure>
 
 
         <!-- add song name function -->
-        
+      <div class="belowMusicSheet">
         <div class="renameSong">
-          <span id="outputName">Default Song Name</span>
+          <span id="outputName">Your song!</span>
         <!-- <button id="updateSongNameButton">Song Name</button> -->
         
-        <img src="./src/styles/editbutton.jpeg" alt="" id="updateSongNameButton">
+        <img src="./src/images/editButton.png" alt="" id="updateSongNameButton">
         <script>
             document.getElementById("updateSongNameButton").onclick = function(){
               var name = prompt("Enter your own song name!");
@@ -38,18 +52,24 @@
         </script>
             
         </div>
+        
+        <div class="functionalButtons">
+          <!-- <button id="resetButton">Reset Music Sheet</button> -->
+          <input type="image" id="resetButton" src="./src/images/resetButton.png" />
 
-        <button id="playButton">Play</button>
-        <button id="resetButton">Reset Music Sheet</button>
+          <!-- <button id="playButton">Play</button> -->
+          <input type="image" id="playButton" src="./src/images/playButton.png">
         <!-- this is backup in case reset button doesn't work-->
         <!-- <button id="resetButton" onClick="window.location.reload();">Reset Music Sheet</button>  -->
         
-        <label for="">Instrument Selector</label>
+        <label for="" id="instrumentLabel">Instrument Selector</label>
         <select name="instrumentSelector" id="instrumentSelector">
           <option value="saxophone" selected="select">Saxophone</option>
           <option value="trumpet">Trumpet</option>
           <option value="clarinet">Clarinet</option>
         </select>
+        </div>
+      </div>  <!-- this is the closing Div for the belowMusicSheet class-->
         
         <ul class = 'SaxNotes'>
           <audio src="./src/mp3files/saxophone/sax3c.mp3" id="sax3c"></audio>

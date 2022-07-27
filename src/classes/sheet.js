@@ -118,6 +118,11 @@ class Sheet {
   
     }
 
+    displayInstructions(){
+      let instructionsButton = document.getElementById('instructionsButton');
+      instructionsButton.classList.toggle("showInstructions");
+    }
+
   }
   
   export default Sheet;

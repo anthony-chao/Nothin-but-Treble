@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetButton = document.getElementById('resetButton');
   resetButton.addEventListener('click', player.resetMusicSheet.bind(player));
   // resetButton.addEventListener('click', sheet.resetCountObject);
+
+  let instructionsButton = document.getElementById('instructionsButton');
+  instructionsButton.addEventListener('click',sheet.displayInstructions.bind(sheet)); 
 });
 
 

@@ -34,7 +34,8 @@ figure ul {
     display: inline-block;
     width: 100px;
     height: 15px;
-    background: white;
+    /* background: white; */
+    background-color: white;
   }
 
 .even-row {
@@ -57,3 +58,7 @@ figure ul {
     height: 200px;
     width: 120px;
   }
+
+  /* .musicSheet {
+    background-color: grey;
+  } */

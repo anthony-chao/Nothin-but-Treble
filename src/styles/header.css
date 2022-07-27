@@ -2,16 +2,16 @@
 
 .wrapper {
     width: 100vw;
-    height: 40vh;
+    height: 38vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../src/styles/jazz3.jpeg);
+    background-image: url(../src/images/jazzbar-top.jpeg);
     background-size: cover;
 }
 
 .neon-wrapper {
-    width: 100vw;
+    width: 60vw;
     height: 35vh;
     display: flex;
     align-items: center;
@@ -21,18 +21,16 @@
 .neon-text {
     font-family: 'Exo 2', sans-serif;
     background: #000;
-    /* --neon-text-color: #f40;
-    --neon-border-color: #08f; */
     --neon-text-color: #D705F2;
     --neon-border-color: #5496BF;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;   */
     font-size: 4.5rem;
     font-weight: 200;
     font-style: italic;
     color: #fff;
-    padding: 2rem 2rem 2.5rem;
+    padding: 1rem 1rem 1.5rem;
     border: 0.4rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10s infinite alternate;     

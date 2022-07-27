@@ -19,7 +19,6 @@ li > div > .movingNotes {
 }
 
 .note-box {
-    width: 100px;
     display: flex;
     /* position: relative; */
     align-items: left;
