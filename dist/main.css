@@ -1,3 +1,7 @@
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css ***!
+  \*****************************************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/css_reset.css ***!
   \********************************************************************************************************/
@@ -53,15 +57,87 @@ table {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/buttons.css ***!
   \******************************************************************************************************/
 
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css ***!
-  \*****************************************************************************************************/
-h1 {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 80px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css (1) ***!
+  \*********************************************************************************************************/
+.wrapper {
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../src/styles/jazz3.jpeg);
+    background-size: cover;
+}
+
+.neon-wrapper {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neon-text {
+    font-family: 'Exo 2', sans-serif;
+    background: #000;
+    /* --neon-text-color: #f40;
+    --neon-border-color: #08f; */
+    --neon-text-color: #D705F2;
+    --neon-border-color: #5496BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 5rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #fff;
+    padding: 2rem 2rem 2.5rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    animation: flicker 10s infinite alternate;     
+}
+
+.neon-text::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.neon-text::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.neon-text:focus {
+  outline: none;
+}
+
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
 }
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/note.css ***!

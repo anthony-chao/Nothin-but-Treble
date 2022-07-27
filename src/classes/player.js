@@ -3,8 +3,6 @@ class Player {
     constructor(){
         this.instrument = "clarinet";
         this.containers = document.querySelectorAll('.droppable');
-        // this.instrumentSelected = document.querySelector("select").value; 
-
     }
 
     resetMusicSheet(){
@@ -13,14 +11,9 @@ class Player {
         for (const image of images) {
             image.parentNode.removeChild(image);
         }
-
     }
 
     playMusic(instrument) {
-
-        //add IF statement so that if instrumentSelected is trumpet, use second hash, if it's piano, use first hash
-        
-        console.log(instrument);
 
         const rowToNote = new Object();
 
@@ -84,7 +77,7 @@ class Player {
                 setTimeout(function() {
                     rowToNote[notesToBePlayed[i]].play();
                     console.log(rowToNote[notesToBePlayed[i]]);
-                }, 900 * i);            //500 for piano, 800 for trumpet
+                }, 800 * i);
             })(i);
         }
     }
