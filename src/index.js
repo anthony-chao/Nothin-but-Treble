@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const rootEl = document.querySelector(".MusicSheet");
   let sheet = new Sheet(rootEl);
-  const notes = new Notes(rootEl);
+  const noteRoot = document.querySelector(".Notes")
+  const notes = new Notes(noteRoot);
   const player = new Player();
   const selectInstrument = document.getElementById('instrumentSelector');
   const playButton = document.getElementById('playButton');

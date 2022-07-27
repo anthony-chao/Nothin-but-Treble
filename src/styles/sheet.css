@@ -3,8 +3,10 @@ figure ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 55px;
-    margin-right: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 450px;
     height: 200px;
   }
@@ -33,7 +35,6 @@ figure ul {
     width: 100px;
     height: 15px;
     background: white;
-    /* cursor: pointer; */
   }
 
 .even-row {
@@ -52,7 +53,7 @@ figure ul {
 
   .cleff {
     position: absolute;
-    left: 0px;
+    left: 40px;
     height: 200px;
     width: 120px;
   }

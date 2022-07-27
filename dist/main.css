@@ -56,13 +56,21 @@ table {
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/buttons.css ***!
   \******************************************************************************************************/
+#outputname {
+    font-size: 30px;
+}
 
+
+#updateSongNameButton {
+    height: 30px;
+    width: 30px;
+}
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css (1) ***!
   \*********************************************************************************************************/
 .wrapper {
     width: 100vw;
-    height: 45vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +80,7 @@ table {
 
 .neon-wrapper {
     width: 100vw;
-    height: 40vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +96,7 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;  
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 200;
     font-style: italic;
     color: #fff;
@@ -145,19 +153,33 @@ table {
 li > div > .movingNotes {
     cursor: pointer;
     position: relative;
-    left: 50%;
+    right: 25%;
+    /* left: -25%; */
     height: 100px;
     width: 40px;
     z-index: 1000;
-    margin-left: 0px;
+    /* margin-left: 10px; */
     bottom: 75px;
 }
 
 .movingNotes {
-    margin-left: 200px;
+    float: right;
+    margin-left: 300px;
     height: 100px;
     width: 40px;
     cursor: grab;
+}
+
+.note-box {
+    width: 100px;
+    display: flex;
+    /* position: relative; */
+    align-items: left;
+    justify-content: left;
+}
+
+.notes {
+    width: 20px;
 }
   
 .aboveA > #img {
@@ -180,8 +202,10 @@ figure ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 55px;
-    margin-right: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 450px;
     height: 200px;
   }
@@ -210,7 +234,6 @@ figure ul {
     width: 100px;
     height: 15px;
     background: white;
-    /* cursor: pointer; */
   }
 
 .even-row {
@@ -229,7 +252,7 @@ figure ul {
 
   .cleff {
     position: absolute;
-    left: 0px;
+    left: 40px;
     height: 200px;
     width: 120px;
   }

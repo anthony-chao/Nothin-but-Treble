@@ -1,19 +1,33 @@
 li > div > .movingNotes {
     cursor: pointer;
     position: relative;
-    left: 50%;
+    right: 25%;
+    /* left: -25%; */
     height: 100px;
     width: 40px;
     z-index: 1000;
-    margin-left: 0px;
+    /* margin-left: 10px; */
     bottom: 75px;
 }
 
 .movingNotes {
-    margin-left: 200px;
+    float: right;
+    margin-left: 300px;
     height: 100px;
     width: 40px;
     cursor: grab;
+}
+
+.note-box {
+    width: 100px;
+    display: flex;
+    /* position: relative; */
+    align-items: left;
+    justify-content: left;
+}
+
+.notes {
+    width: 20px;
 }
   
 .aboveA > #img {

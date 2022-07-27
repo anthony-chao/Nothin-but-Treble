@@ -2,7 +2,7 @@
 
 .wrapper {
     width: 100vw;
-    height: 45vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
 
 .neon-wrapper {
     width: 100vw;
-    height: 40vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 200;
     font-style: italic;
     color: #fff;

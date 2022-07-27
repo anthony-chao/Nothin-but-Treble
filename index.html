@@ -15,9 +15,29 @@
           <div class="neon-wrapper">
             <div class="neon-text">TREBLE <br>SHEET</div>
           </div>
+          <div class="note-box">
+          <figure class="Notes"></figure>
+          </div>
         </div>
 
         <figure class="MusicSheet"> </figure>
+
+
+        <!-- add song name function -->
+        
+        <div class="renameSong">
+          <span id="outputName">Default Song Name</span>
+        <!-- <button id="updateSongNameButton">Song Name</button> -->
+        
+        <img src="./src/styles/editbutton.jpeg" alt="" id="updateSongNameButton">
+        <script>
+            document.getElementById("updateSongNameButton").onclick = function(){
+              var name = prompt("Enter your own song name!");
+              document.getElementById("outputName").innerText = name;
+            }
+        </script>
+            
+        </div>
 
         <button id="playButton">Play</button>
         <button id="resetButton">Reset Music Sheet</button>
@@ -30,70 +50,58 @@
           <option value="trumpet">Trumpet</option>
           <option value="clarinet">Clarinet</option>
         </select>
-
-        <!-- add song name function -->
-        <button id="songName">Song Name</button>
-      
-        <p>
-          <span id="outputName">Default Song Name</span>
-        </p>
         
         <ul class = 'SaxNotes'>
-          <audio src="./src/classes/saxophone/sax3c.mp3" id="sax3c"></audio>
-          <audio src="./src/classes/saxophone/sax3d.mp3" id="sax3d"></audio>
-          <audio src="./src/classes/saxophone/sax3e.mp3" id="sax3e"></audio>
-          <audio src="./src/classes/saxophone/sax3f.mp3" id="sax3f"></audio>
-          <audio src="./src/classes/saxophone/sax3g.mp3" id="sax3g"></audio>
-          <audio src="./src/classes/saxophone/sax4a.mp3" id="sax4a"></audio>
-          <audio src="./src/classes/saxophone/sax4b.mp3" id="sax4b"></audio>
-          <audio src="./src/classes/saxophone/sax4c.mp3" id="sax4c"></audio>
-          <audio src="./src/classes/saxophone/sax4d.mp3" id="sax4d"></audio>
-          <audio src="./src/classes/saxophone/sax4e.mp3" id="sax4e"></audio>
-          <audio src="./src/classes/saxophone/sax4f.mp3" id="sax4f"></audio>
-          <audio src="./src/classes/saxophone/sax4g.mp3" id="sax4g"></audio>
-          <audio src="./src/classes/saxophone/sax5a.mp3" id="sax5a"></audio>
+          <audio src="./src/mp3files/saxophone/sax3c.mp3" id="sax3c"></audio>
+          <audio src="./src/mp3files/saxophone/sax3d.mp3" id="sax3d"></audio>
+          <audio src="./src/mp3files/saxophone/sax3e.mp3" id="sax3e"></audio>
+          <audio src="./src/mp3files/saxophone/sax3f.mp3" id="sax3f"></audio>
+          <audio src="./src/mp3files/saxophone/sax3g.mp3" id="sax3g"></audio>
+          <audio src="./src/mp3files/saxophone/sax4a.mp3" id="sax4a"></audio>
+          <audio src="./src/mp3files/saxophone/sax4b.mp3" id="sax4b"></audio>
+          <audio src="./src/mp3files/saxophone/sax4c.mp3" id="sax4c"></audio>
+          <audio src="./src/mp3files/saxophone/sax4d.mp3" id="sax4d"></audio>
+          <audio src="./src/mp3files/saxophone/sax4e.mp3" id="sax4e"></audio>
+          <audio src="./src/mp3files/saxophone/sax4f.mp3" id="sax4f"></audio>
+          <audio src="./src/mp3files/saxophone/sax4g.mp3" id="sax4g"></audio>
+          <audio src="./src/mp3files/saxophone/sax5a.mp3" id="sax5a"></audio>
         </ul>
 
         <ul class = 'TrumpetNotes'>
-          <audio src="./src/classes/trumpet/trumpet3c.mp3" id="trumpet3c"></audio>
-          <audio src="./src/classes/trumpet/trumpet3d.mp3" id="trumpet3d"></audio>
-          <audio src="./src/classes/trumpet/trumpet3e.mp3" id="trumpet3e"></audio>
-          <audio src="./src/classes/trumpet/trumpet3f.mp3" id="trumpet3f"></audio>
-          <audio src="./src/classes/trumpet/trumpet3g.mp3" id="trumpet3g"></audio>
-          <audio src="./src/classes/trumpet/trumpet4a.mp3" id="trumpet4a"></audio>
-          <audio src="./src/classes/trumpet/trumpet4b.mp3" id="trumpet4b"></audio>
-          <audio src="./src/classes/trumpet/trumpet4c.mp3" id="trumpet4c"></audio>
-          <audio src="./src/classes/trumpet/trumpet4d.mp3" id="trumpet4d"></audio>
-          <audio src="./src/classes/trumpet/trumpet4e.mp3" id="trumpet4e"></audio>
-          <audio src="./src/classes/trumpet/trumpet4f.mp3" id="trumpet4f"></audio>
-          <audio src="./src/classes/trumpet/trumpet4g.mp3" id="trumpet4g"></audio>
-          <audio src="./src/classes/trumpet/trumpet5a.mp3" id="trumpet5a"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet3c.mp3" id="trumpet3c"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet3d.mp3" id="trumpet3d"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet3e.mp3" id="trumpet3e"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet3f.mp3" id="trumpet3f"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet3g.mp3" id="trumpet3g"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4a.mp3" id="trumpet4a"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4b.mp3" id="trumpet4b"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4c.mp3" id="trumpet4c"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4d.mp3" id="trumpet4d"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4e.mp3" id="trumpet4e"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4f.mp3" id="trumpet4f"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet4g.mp3" id="trumpet4g"></audio>
+          <audio src="./src/mp3files/trumpet/trumpet5a.mp3" id="trumpet5a"></audio>
         </ul>
 
         <ul class = 'clarinetNotes'>
-          <audio src="./src/classes/clarinet/clarinet3c.mp3" id="clarinet3c"></audio>
-          <audio src="./src/classes/clarinet/clarinet3d.mp3" id="clarinet3d"></audio>
-          <audio src="./src/classes/clarinet/clarinet3e.mp3" id="clarinet3e"></audio>
-          <audio src="./src/classes/clarinet/clarinet3f.mp3" id="clarinet3f"></audio>
-          <audio src="./src/classes/clarinet/clarinet3g.mp3" id="clarinet3g"></audio>
-          <audio src="./src/classes/clarinet/clarinet4a.mp3" id="clarinet4a"></audio>
-          <audio src="./src/classes/clarinet/clarinet4b.mp3" id="clarinet4b"></audio>
-          <audio src="./src/classes/clarinet/clarinet4c.mp3" id="clarinet4c"></audio>
-          <audio src="./src/classes/clarinet/clarinet4d.mp3" id="clarinet4d"></audio>
-          <audio src="./src/classes/clarinet/clarinet4e.mp3" id="clarinet4e"></audio>
-          <audio src="./src/classes/clarinet/clarinet4f.mp3" id="clarinet4f"></audio>
-          <audio src="./src/classes/clarinet/clarinet4g.mp3" id="clarinet4g"></audio>
-          <audio src="./src/classes/clarinet/clarinet5a.mp3" id="clarinet5a"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet3c.mp3" id="clarinet3c"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet3d.mp3" id="clarinet3d"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet3e.mp3" id="clarinet3e"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet3f.mp3" id="clarinet3f"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet3g.mp3" id="clarinet3g"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4a.mp3" id="clarinet4a"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4b.mp3" id="clarinet4b"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4c.mp3" id="clarinet4c"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4d.mp3" id="clarinet4d"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4e.mp3" id="clarinet4e"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4f.mp3" id="clarinet4f"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet4g.mp3" id="clarinet4g"></audio>
+          <audio src="./src/mp3files/clarinet/clarinet5a.mp3" id="clarinet5a"></audio>
         </ul>
 
-        <script>
-          document.getElementById("songName").onclick = function(){
-            var name = prompt("Enter your own song name!");
-            document.getElementById("outputName").innerText = name;
-          }
-        </script>
 
     </div>
+
   </body>
 
 </html>
