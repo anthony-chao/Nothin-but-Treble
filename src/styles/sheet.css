@@ -7,9 +7,15 @@ figure ul {
     margin-right: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 450px;
-    height: 200px;
+    width: 1205px;
+    height: 195px;
     opacity: 0.8;
+    border: 10px red solid;
+    /* padding: 1rem 1rem 1.5rem; */
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    animation: flicker 10s infinite alternate;   
+    --neon-border-color: #5496BF;
   }
 
   li {
@@ -69,10 +75,10 @@ body {
   background-size: cover;
 }
 
-.last-row {
+/* .last-row {
   border-bottom: 10px red solid;
 }
 
 .first-row {
   border-top: 10px red solid;
-}
+} */
