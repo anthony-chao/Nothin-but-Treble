@@ -9,6 +9,7 @@ figure ul {
     margin-bottom: 10px;
     width: 450px;
     height: 200px;
+    opacity: 0.8;
   }
 
   li {
@@ -62,3 +63,16 @@ figure ul {
   /* .musicSheet {
     background-color: grey;
   } */
+
+body {
+  background-image: url(../src/images/jazzbar-top.jpeg);
+  background-size: cover;
+}
+
+.last-row {
+  border-bottom: 10px red solid;
+}
+
+.first-row {
+  border-top: 10px red solid;
+}

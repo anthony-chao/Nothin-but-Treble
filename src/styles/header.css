@@ -6,8 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../src/images/jazzbar-top.jpeg);
-    background-size: cover;
+    /* background-image: url(../src/images/jazzbar-top.jpeg); */
+    /* background-size: cover; */
 }
 
 .neon-wrapper {

@@ -65,11 +65,12 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     font-weight: 800;
     color: purple;
     margin-right: 10px;
+    display: relative;
 }
 
 #updateSongNameButton {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
 }
 
 .renameSong {
@@ -82,8 +83,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .belowMusicSheet {
     width: 100vw;
     height: 32vh;
-    background-image: url(../src/images/jazzbar-bottom.jpeg);
-    background-size: cover;
+    /* background-image: url(../src/images/jazzbar-bottom.jpeg);
+    background-size: cover; */
 }
 
 .functionalButtons {
@@ -206,8 +207,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../src/images/jazzbar-top.jpeg);
-    background-size: cover;
+    /* background-image: url(../src/images/jazzbar-top.jpeg); */
+    /* background-size: cover; */
 }
 
 .neon-wrapper {
@@ -317,12 +318,6 @@ li > div > .movingNotes {
     bottom: 5px;
     content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Figure_rythmique_noire_hampe_bas.svg/365px-Figure_rythmique_noire_hampe_bas.svg.png");
 }
-
-#noteStem {
-    position: absolute;
-    height: 80px;
-    width: 50px;
-}
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/sheet.css ***!
   \****************************************************************************************************/
@@ -337,6 +332,7 @@ figure ul {
     margin-bottom: 10px;
     width: 450px;
     height: 200px;
+    opacity: 0.8;
   }
 
   li {
@@ -390,6 +386,19 @@ figure ul {
   /* .musicSheet {
     background-color: grey;
   } */
+
+body {
+  background-image: url(../src/images/jazzbar-top.jpeg);
+  background-size: cover;
+}
+
+.last-row {
+  border-bottom: 10px red solid;
+}
+
+.first-row {
+  border-top: 10px red solid;
+}
 /*!***********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
   \***********************************************************************************************************/
@@ -415,8 +424,8 @@ figure ul {
     /* visibility: hidden; */
     font-family: 'Exo 2', sans-serif;
     opacity: 0%;
-    width: 400px;
-    height: 133px;
+    width: 500px;
+    height: 180px;
     padding: 5px;
     background-color: white;
     color: rgb(0, 0, 0);
@@ -424,7 +433,7 @@ figure ul {
     border-radius: 6px;
     /* margin-left: 20px; */
     left: 10px;
-    margin-top: 30px;
+    margin-top: 60px;
     position: absolute;
     z-index: 1;
     transition: opacity,1s;

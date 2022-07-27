@@ -1,4 +1,4 @@
-# :musical_score: Treble-Sheet 
+# :musical_score: Nothin' but Treble: A Treblesome Music Sheet
 
 ## Background
 Treble Sheet is an app that allows users to drag notes onto a music sheet and play said notes. Users will have the ability to choose between different notes, type of notes, and instruments. This is an opportunity to learn how to practice reading and writing music by visually adding notes to a music sheet, and hearing the actual result.
