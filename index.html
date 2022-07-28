@@ -66,16 +66,25 @@
         <!-- this is backup in case reset button doesn't work-->
         <!-- <button id="resetButton" onClick="window.location.reload();">Reset Music Sheet</button>  -->
         
-        <label for="" id="instrumentLabel">Instrument Selector</label>
+        <!-- <label for="" id="instrumentLabel">Instrument Selector</label> -->
         <!-- <select name="instrumentSelector" id="instrumentSelector">
           <option value="saxophone" selected="select">Saxophone</option>
           <option value="trumpet">Trumpet</option>
           <option value="clarinet">Clarinet</option>
         </select> -->
         <form action="" id="instrumentSelector">
-          <input type="radio" name="radiobutton" value="saxophone">
-          <input type="radio" name="radiobutton" value="trumpet">
-          <input type="radio" name="radiobutton" value="clarinet">
+          <label>
+              <input type="radio" name="radiobutton" value="saxophone" checked="checked">
+              <img src="./src/images/saxophone.png" alt="">
+          </label>
+          <label>
+              <input type="radio" name="radiobutton" value="trumpet">
+              <img src="./src/images/trumpet.png" alt="">
+          </label>
+          <label>
+              <input type="radio" name="radiobutton" value="clarinet">
+              <img src="./src/images/clarinet.png" alt="">
+          </label>
         </form>
         </div>
       </div>  <!-- this is the closing Div for the belowMusicSheet class-->
