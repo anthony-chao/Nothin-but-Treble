@@ -17,9 +17,7 @@ In addition, this project will include:
 
 ## Wireframes
 
-![Screen Shot 2022-07-21 at 8 01 54 PM](https://user-images.githubusercontent.com/105829857/180334421-2b1200d7-c62f-4022-9e48-2957c34354d1.png)
-
-![Alt text](./src/images/Wireframe.png?raw=true "Optional Title")
+![Alt text](./src/images/Wireframe.png?raw=true "Nothin but Treble - wireframe")
 
 
 ## Technologies, Libraries, APIs
@@ -30,8 +28,8 @@ This project was implemented with the following technologies:
 
 ## Implementation Timeline
 
-* Friday Afternoon & Weekend - create the music sheet and associate each row on the music sheet with a different note. Design the type of notes (quarter note, half note, whole note, etc.) and implement the hold and drop functionality on the music sheet. Add/associate audio files for each type of note and implement holding notes for more than just one beat.
-* Monday - implement hover features for the notes on the music sheet and the type of notes for informational purposes. Add play/pause music, and add/delete/reset music bars buttons.
-* Tuesday - adding different instruments and add additional functionality to change the time signature of the bars. Begin CSS styling
-* Wednesday - finish up CSS styling and testing to ensure all essentially functionality implemented is properly working.
+* Friday Afternoon & Weekend - create the music sheet and associate each row on the music sheet with a different note. Design the type of notes (quarter note) and implement the drag and drop functionality on the music sheet. Add/associate audio files for each type of note.
+* Monday - add play music and reset music bars buttons. Add rename song button.
+* Tuesday - add different instruments and have the ability to change instruments. 
+* Wednesday - start CSS styling and testing to ensure all essentially functionality implemented is properly working
 * Thursday Morning - continue polishing up CSS and functionality, and push to production.
