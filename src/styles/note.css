@@ -19,10 +19,6 @@ li > div > .movingNotes {
 }
 
 .note-box {
-    /* display: flex; */
-    /* position: relative; */
-    /* align-items: left;
-    justify-content: left; */
     position: absolute;
     right: 250px;
     background-image: url(../src/images/poster.png);
@@ -38,12 +34,9 @@ li > div > .movingNotes {
     position: absolute;
     top: 150px;
     width: 130px;
-    background: #000;
+    background-color: blue;
     --instructionsButton-color: white;
-    --neon-border-color: #5496BF;
-    /* font-size: 1rem; */
-    /* font-weight: 200; */
-    /* font-style: italic; */
+    --neon-border-color: #D705F2;
     color: white;
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;

@@ -87,15 +87,16 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .belowMusicSheet {
     width: 100vw;
     height: 32vh;
-    /* background-image: url(../src/images/jazzbar-bottom.jpeg);
-    background-size: cover; */
 }
 
 .functionalButtons {
+    width: 900px;
     display: flex;
     align-items: center;
     padding-top: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 330px;
 }
 
 #instrumentSelector {
@@ -106,7 +107,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 /* This is the format to make the output song name in a neon light */
 #outputName {
     font-family: 'Exo 2', sans-serif;
-    background: #000;
+    background: #D705F2;
     --outputName-color: #D705F2;
     --neon-border-color: #5496BF;
     display: flex;
@@ -115,7 +116,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     font-size: 2rem;
     font-weight: 200;
     font-style: italic;
-    color: #D705F2;
+    color: white;
     padding: 1rem 1rem 1rem;
     border: 0.4rem solid #fff;
     border-radius: 2rem;
@@ -165,30 +166,36 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 #resetButton {
-    background-color: white;
-    height: 50px;
-    width: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 150px; */
+    margin-left: 250px;
+    /* background-color: #5496BF; */
+    height: 60px;
+    width: 60px;
     padding: 0.5rem 0.5rem 0.5rem;
     border: 0.4rem solid #fff;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    --neon-border-color: #5496BF;
+    animation: flicker 100000s infinite alternate;
 }
 
-
 #playButton {
-    margin-left: 50px;
-    margin-right: 50px;
-    background-color: white;
-    height: 50px;
-    width: 50px;
+    /* position: absolute;
+    left: 625px; */
+    /* margin-left: 50px;
+    margin-right: 100px; */
+    background-color: #5496BF;
+    height: 90px;
+    width: 90px;
     padding: 0.5rem 0.5rem 0.5rem;
     border: 0.4rem solid #fff;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    --neon-border-color: #D705F2;
+    animation: flicker 100000s infinite alternate;     
 }
 
 #github {
@@ -203,7 +210,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     top: 30px;
 }
 
-/* HIDE RADIO */
 [type=radio] { 
     position: absolute;
     opacity: 0;
@@ -212,23 +218,28 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     display: none;
   }
   
-  /* IMAGE STYLES */
   [type=radio] + img {
     cursor: pointer;
     height: 60px;
     width: 60px;
+    margin-bottom: 10px;
   }
   
-  /* CHECKED STYLES */
   [type=radio]:checked + img {
-    outline: 2px solid #f00;
+    padding: 0.5rem 0.5rem 0.5rem;
+    border: 0.4rem solid #fff;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    --neon-border-color: #5496BF;
+    animation: flicker 100000s infinite alternate;  
   }
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css (1) ***!
   \*********************************************************************************************************/
 .wrapper {
     width: 100vw;
-    height: 38vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,10 +333,6 @@ li > div > .movingNotes {
 }
 
 .note-box {
-    /* display: flex; */
-    /* position: relative; */
-    /* align-items: left;
-    justify-content: left; */
     position: absolute;
     right: 250px;
     background-image: url(../src/images/poster.png);
@@ -341,12 +348,9 @@ li > div > .movingNotes {
     position: absolute;
     top: 150px;
     width: 130px;
-    background: #000;
+    background-color: blue;
     --instructionsButton-color: white;
-    --neon-border-color: #5496BF;
-    /* font-size: 1rem; */
-    /* font-weight: 200; */
-    /* font-style: italic; */
+    --neon-border-color: #D705F2;
     color: white;
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;
@@ -439,22 +443,10 @@ figure ul {
     width: 120px;
   }
 
-  /* .musicSheet {
-    background-color: grey;
-  } */
-
 body {
   background-image: url(../src/images/jazzbar-top.jpeg);
   background-size: cover;
 }
-
-/* .last-row {
-  border-bottom: 10px red solid;
-}
-
-.first-row {
-  border-top: 10px red solid;
-} */
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
   \***************************************************************************************************************/
@@ -464,11 +456,10 @@ body {
     top: 20px;
     left: 20px;
     margin-bottom: 200px;
-    background: #000;
-    --instructionsButton-color: white;
-    --neon-border-color: #5496BF;
-    font-size: 1rem;
-    font-weight: 200;
+    background-color: blue;
+    --neon-border-color: #D705F2;
+    font-size: 1.25rem;
+    font-weight: 900;
     color: white;
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;
@@ -487,9 +478,8 @@ body {
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 6px;
-    /* margin-left: 20px; */
     left: 10px;
-    margin-top: 70px;
+    margin-top: 90px;
     position: absolute;
     z-index: 1;
     transition: opacity,1s;

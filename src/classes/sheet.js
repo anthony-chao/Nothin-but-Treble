@@ -63,11 +63,6 @@ class Sheet {
         e.stopPropagation();
         return false;
       }
-
-      function resetCountObject() {
-        for (let member in countObject) { delete countObject[member]};
-      }
-
     }
     
     setupSheet() {

@@ -23,15 +23,16 @@
 .belowMusicSheet {
     width: 100vw;
     height: 32vh;
-    /* background-image: url(../src/images/jazzbar-bottom.jpeg);
-    background-size: cover; */
 }
 
 .functionalButtons {
+    width: 900px;
     display: flex;
     align-items: center;
     padding-top: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 330px;
 }
 
 #instrumentSelector {
@@ -42,7 +43,7 @@
 /* This is the format to make the output song name in a neon light */
 #outputName {
     font-family: 'Exo 2', sans-serif;
-    background: #000;
+    background: #D705F2;
     --outputName-color: #D705F2;
     --neon-border-color: #5496BF;
     display: flex;
@@ -51,7 +52,7 @@
     font-size: 2rem;
     font-weight: 200;
     font-style: italic;
-    color: #D705F2;
+    color: white;
     padding: 1rem 1rem 1rem;
     border: 0.4rem solid #fff;
     border-radius: 2rem;
@@ -101,30 +102,36 @@
 }
 
 #resetButton {
-    background-color: white;
-    height: 50px;
-    width: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 150px; */
+    margin-left: 250px;
+    /* background-color: #5496BF; */
+    height: 60px;
+    width: 60px;
     padding: 0.5rem 0.5rem 0.5rem;
     border: 0.4rem solid #fff;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    --neon-border-color: #5496BF;
+    animation: flicker 100000s infinite alternate;
 }
 
-
 #playButton {
-    margin-left: 50px;
-    margin-right: 50px;
-    background-color: white;
-    height: 50px;
-    width: 50px;
+    /* position: absolute;
+    left: 625px; */
+    /* margin-left: 50px;
+    margin-right: 100px; */
+    background-color: #5496BF;
+    height: 90px;
+    width: 90px;
     padding: 0.5rem 0.5rem 0.5rem;
     border: 0.4rem solid #fff;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    --neon-border-color: #D705F2;
+    animation: flicker 100000s infinite alternate;     
 }
 
 #github {
@@ -139,7 +146,6 @@
     top: 30px;
 }
 
-/* HIDE RADIO */
 [type=radio] { 
     position: absolute;
     opacity: 0;
@@ -148,14 +154,19 @@
     display: none;
   }
   
-  /* IMAGE STYLES */
   [type=radio] + img {
     cursor: pointer;
     height: 60px;
     width: 60px;
+    margin-bottom: 10px;
   }
   
-  /* CHECKED STYLES */
   [type=radio]:checked + img {
-    outline: 2px solid #f00;
+    padding: 0.5rem 0.5rem 0.5rem;
+    border: 0.4rem solid #fff;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    --neon-border-color: #5496BF;
+    animation: flicker 100000s infinite alternate;  
   }

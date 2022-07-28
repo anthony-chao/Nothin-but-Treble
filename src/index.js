@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const player = new Player();
   const playButton = document.getElementById('playButton');
   let instruments = {saxophone:'saxophone', clarinet:'clarinet', trumpet:'trumpet'}
-  let instrument = instruments.saxophone;
+  let instrument = instruments.clarinet;
 
   // this code was used for creating a dropdown for the instruments.
   // const selectInstrument = document.getElementById('instrumentSelector');
@@ -37,8 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const resetButton = document.getElementById('resetButton');
-  resetButton.addEventListener('click', player.resetMusicSheet.bind(player));
-  // resetButton.addEventListener('click', sheet.resetCountObject);
+  // resetButton.addEventListener('click', () => {
+  //   player.resetMusicSheet.bind(player)();
+  // });
+
+  resetButton.addEventListener('click', () => {
+    document.location.reload(true);
+  })
 
   let instructionsButton = document.getElementById('instructionsButton');
   instructionsButton.addEventListener('click',sheet.displayInstructions.bind(sheet)); 

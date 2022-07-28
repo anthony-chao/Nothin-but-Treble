@@ -6,11 +6,10 @@
     top: 20px;
     left: 20px;
     margin-bottom: 200px;
-    background: #000;
-    --instructionsButton-color: white;
-    --neon-border-color: #5496BF;
-    font-size: 1rem;
-    font-weight: 200;
+    background-color: blue;
+    --neon-border-color: #D705F2;
+    font-size: 1.25rem;
+    font-weight: 900;
     color: white;
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;
@@ -29,9 +28,8 @@
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 6px;
-    /* margin-left: 20px; */
     left: 10px;
-    margin-top: 70px;
+    margin-top: 90px;
     position: absolute;
     z-index: 1;
     transition: opacity,1s;
