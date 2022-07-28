@@ -1,14 +1,15 @@
 # :musical_score: Nothin' but Treble: A Treblesome Music Sheet
+Link to the live site: https://anthony-chao.github.io/Nothin-but-Treble/
 
 ## Background
-Treble Sheet is an app that allows users to drag notes onto a music sheet and play said notes. Users will have the ability to choose between different notes, type of notes, and instruments. This is an opportunity to learn how to practice reading and writing music by visually adding notes to a music sheet, and hearing the actual result.
+Nothin' but Treble is a music sheet app where users are able to drag quarter notes onto a music sheet, and have the notes played. Users will have the ability to select between different instruments to render the music. This is an interactive demo for users to learn the basics of writing music.
 
 ## Functionality & MVPs
 In Treble Sheet, users will be able to:
 * Drag and drop notes on to the music sheet
-* Play the music sheet using where each note is placed and what type of note it is
-* Add, delete or reset music bars
-* Learn how to read notes in Treble clef using built-in hover functionality
+* Select which instrument they want to play the music
+* Play the music sheet depending on which instrument the user selected and where each note is placed
+* Rename their own masterpiece!
 
 In addition, this project will include:
 * Instructions on how to use Treble Sheet
@@ -18,11 +19,14 @@ In addition, this project will include:
 
 ![Screen Shot 2022-07-21 at 8 01 54 PM](https://user-images.githubusercontent.com/105829857/180334421-2b1200d7-c62f-4022-9e48-2957c34354d1.png)
 
+![Alt text](./src/images/Wireframe.png?raw=true "Optional Title")
+
+
 ## Technologies, Libraries, APIs
 This project was implemented with the following technologies:
-* HTML, CSS, and JavaScript
-
-Additionally, this project might utilize VexFlow, which is an open-source library for rendering music notation.
+* JavaScript
+* HTML
+* CSS
 
 ## Implementation Timeline
 
