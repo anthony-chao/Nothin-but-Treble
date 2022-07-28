@@ -55,5 +55,5 @@ li > div > .movingNotes {
     height: 100px;
     width: 40px;
     bottom: 5px;
-    content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Figure_rythmique_noire_hampe_bas.svg/365px-Figure_rythmique_noire_hampe_bas.svg.png");
+    content:url("../src/images/upsidedown-note.png");
 }

@@ -104,10 +104,10 @@ class Sheet {
         bar.append(beat);
       }
 
-      const cleff = document.createElement('img');
-      cleff.src = "http://assets.stickpng.com/images/5a02cb3018e87004f1ca43e5.png"
-      cleff.classList.add("cleff");
-      bar.append(cleff);
+      const clef = document.createElement('img');
+      clef.src = "./src/images/treble-clef.png"
+      clef.classList.add("clef");
+      bar.append(clef);
   
       this.el.append(bar);
   

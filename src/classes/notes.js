@@ -22,7 +22,7 @@ class Notes {
 
     setupNote() {
         const quarterNote = document.createElement("img");
-        quarterNote.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Quarter_note_with_upwards_stem.svg/320px-Quarter_note_with_upwards_stem.svg.png?20210123112410";
+        quarterNote.src = "./src/images/quarter-note.png";
         quarterNote.classList.add("movingNotes");
         quarterNote.setAttribute("draggable", true);
         quarterNote.setAttribute("id","note");
