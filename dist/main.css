@@ -2,6 +2,10 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css ***!
   \*****************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
+  \***********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/css_reset.css ***!
   \********************************************************************************************************/
@@ -189,14 +193,14 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 #github {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 50px;
+    top: 30px;
 }
 
 #linkedin {
     position: absolute;
-    right: 80px;
-    top: 20px;
+    right: 110px;
+    top: 30px;
 }
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css (1) ***!
@@ -207,8 +211,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(../src/images/jazzbar-top.jpeg); */
-    /* background-size: cover; */
 }
 
 .neon-wrapper {
@@ -224,9 +226,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     background: #000;
     --neon-text-color: #D705F2;
     --neon-border-color: #5496BF;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;   */
     font-size: 4.5rem;
     font-weight: 200;
     font-style: italic;
@@ -302,13 +301,42 @@ li > div > .movingNotes {
 }
 
 .note-box {
-    display: flex;
+    /* display: flex; */
     /* position: relative; */
-    align-items: left;
-    justify-content: left;
+    /* align-items: left;
+    justify-content: left; */
+    position: absolute;
+    right: 250px;
+    background-image: url(../src/images/poster.png);
+    background-size: 150px;
+    width: 140px;
+    height: 150;
+}
+
+.note-box > p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 150px;
+    width: 130px;
+    background: #000;
+    --instructionsButton-color: white;
+    --neon-border-color: #5496BF;
+    /* font-size: 1rem; */
+    /* font-weight: 200; */
+    /* font-style: italic; */
+    color: white;
+    padding: 0.25rem 0.5rem 0.5rem;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    animation: flicker 10000s infinite alternate;    
 }
 
 .notes {
+    position: absolute;
+    top: 15px;
+    right: 50px;
     width: 20px;
 }
   
@@ -336,7 +364,7 @@ figure ul {
     opacity: 0.8;
     border: 10px red solid;
     /* padding: 1rem 1rem 1.5rem; */
-    border: 0.4rem solid #fff;
+    border: 0.5rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10s infinite alternate;   
     --neon-border-color: #5496BF;
@@ -406,9 +434,9 @@ body {
 .first-row {
   border-top: 10px red solid;
 } */
-/*!***********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
-  \***********************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
+  \***************************************************************************************************************/
 #instructionsButton {
     position: absolute;
     top: 20px;
@@ -419,10 +447,9 @@ body {
     --neon-border-color: #5496BF;
     font-size: 1rem;
     font-weight: 200;
-    font-style: italic;
     color: white;
     padding: 0.25rem 0.5rem 0.5rem;
-    border: 0.4rem solid #fff;
+    border: 0.2rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10000s infinite alternate;    
 }
@@ -432,7 +459,7 @@ body {
     font-family: 'Exo 2', sans-serif;
     opacity: 0%;
     width: 500px;
-    height: 180px;
+    height: 200px;
     padding: 5px;
     background-color: white;
     color: rgb(0, 0, 0);
@@ -440,11 +467,10 @@ body {
     border-radius: 6px;
     /* margin-left: 20px; */
     left: 10px;
-    margin-top: 60px;
+    margin-top: 70px;
     position: absolute;
     z-index: 1;
     transition: opacity,1s;
-    font-family: serif;
     
 }
 

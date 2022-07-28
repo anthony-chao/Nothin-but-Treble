@@ -6,8 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(../src/images/jazzbar-top.jpeg); */
-    /* background-size: cover; */
 }
 
 .neon-wrapper {
@@ -23,9 +21,6 @@
     background: #000;
     --neon-text-color: #D705F2;
     --neon-border-color: #5496BF;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;   */
     font-size: 4.5rem;
     font-weight: 200;
     font-style: italic;

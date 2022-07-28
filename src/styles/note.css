@@ -19,13 +19,42 @@ li > div > .movingNotes {
 }
 
 .note-box {
-    display: flex;
+    /* display: flex; */
     /* position: relative; */
-    align-items: left;
-    justify-content: left;
+    /* align-items: left;
+    justify-content: left; */
+    position: absolute;
+    right: 250px;
+    background-image: url(../src/images/poster.png);
+    background-size: 150px;
+    width: 140px;
+    height: 150;
+}
+
+.note-box > p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 150px;
+    width: 130px;
+    background: #000;
+    --instructionsButton-color: white;
+    --neon-border-color: #5496BF;
+    /* font-size: 1rem; */
+    /* font-weight: 200; */
+    /* font-style: italic; */
+    color: white;
+    padding: 0.25rem 0.5rem 0.5rem;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    animation: flicker 10000s infinite alternate;    
 }
 
 .notes {
+    position: absolute;
+    top: 15px;
+    right: 50px;
     width: 20px;
 }
   

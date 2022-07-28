@@ -12,7 +12,7 @@ figure ul {
     opacity: 0.8;
     border: 10px red solid;
     /* padding: 1rem 1rem 1.5rem; */
-    border: 0.4rem solid #fff;
+    border: 0.5rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10s infinite alternate;   
     --neon-border-color: #5496BF;
