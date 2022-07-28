@@ -438,6 +438,7 @@ body {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
   \***************************************************************************************************************/
 #instructionsButton {
+    font-family: 'Exo 2', sans-serif;
     position: absolute;
     top: 20px;
     left: 20px;
