@@ -37,7 +37,9 @@ class Sheet {
         e.preventDefault();
 
         if (countObject.hasOwnProperty(e.target.dataset.column)) {
-          throw new Error('There is already a note in this beat!')
+          // throw new Error('There is already a note on this beat!')
+          alert('There is already a note on this beat!');
+          return false;
         }
 
         let data = e.dataTransfer.getData("text");

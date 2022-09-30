@@ -5,13 +5,13 @@ class Player {
         this.containers = document.querySelectorAll('.droppable');
     }
 
-    resetMusicSheet(){
-        const images = document.querySelectorAll('#img');
+    // resetMusicSheet(){
+    //     const images = document.querySelectorAll('#img');
 
-        for (const image of images) {
-            image.parentNode.removeChild(image);
-        }
-    }
+    //     for (const image of images) {
+    //         image.parentNode.removeChild(image);
+    //     }
+    // }
 
     playMusic(instrument) {
 

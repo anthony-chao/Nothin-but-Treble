@@ -90,13 +90,11 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 .functionalButtons {
-    width: 900px;
     display: flex;
     align-items: center;
     padding-top: 20px;
-    justify-content: space-between;
-    position: absolute;
-    right: 330px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 #instrumentSelector {
@@ -166,10 +164,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 #resetButton {
-    /* margin-left: 50px;
-    margin-right: 150px; */
-    margin-left: 250px;
-    /* background-color: #5496BF; */
+    margin-left: 150px;
     height: 60px;
     width: 60px;
     padding: 0.5rem 0.5rem 0.5rem;
@@ -182,10 +177,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 #playButton {
-    /* position: absolute;
-    left: 625px; */
-    /* margin-left: 50px;
-    margin-right: 100px; */
     background-color: #5496BF;
     height: 90px;
     width: 90px;
@@ -195,7 +186,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     --neon-border-color: #D705F2;
-    animation: flicker 100000s infinite alternate;     
+    animation: flicker 100000s infinite alternate;
+    margin: 0px 50px;
 }
 
 #github {
@@ -375,6 +367,11 @@ li > div > .movingNotes {
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/sheet.css ***!
   \****************************************************************************************************/
+.MusicSheet {
+  display: flex;
+  justify-content: center;
+}
+
 figure ul {
     list-style: none;
     display: flex;
@@ -386,7 +383,7 @@ figure ul {
     margin-bottom: 10px;
     width: 1205px;
     height: 195px;
-    opacity: 0.8;
+    opacity: 1;
     border: 10px red solid;
     /* padding: 1rem 1rem 1.5rem; */
     border: 0.5rem solid #fff;
@@ -406,11 +403,11 @@ figure ul {
   }
 
   li:nth-child(4n) > div:nth-child(-n+2) {
-    border-right: none;
+    border-right: 2px solid white;
   }
 
   li:nth-child(4n) > div:nth-last-child(-n + 2) {
-    border-right: none;
+    border-right: 2px solid white;
   }
 
   
@@ -430,7 +427,7 @@ figure ul {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: black;
     position: absolute;
     top: 50%;
@@ -438,7 +435,8 @@ figure ul {
 
   .clef {
     position: absolute;
-    left: 40px;
+    /* left: 40px; */
+    margin-left: -70px;
     height: 200px;
     width: 120px;
   }

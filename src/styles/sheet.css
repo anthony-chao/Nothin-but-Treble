@@ -1,3 +1,8 @@
+.MusicSheet {
+  display: flex;
+  justify-content: center;
+}
+
 figure ul {
     list-style: none;
     display: flex;
@@ -9,7 +14,7 @@ figure ul {
     margin-bottom: 10px;
     width: 1205px;
     height: 195px;
-    opacity: 0.8;
+    opacity: 1;
     border: 10px red solid;
     /* padding: 1rem 1rem 1.5rem; */
     border: 0.5rem solid #fff;
@@ -29,11 +34,11 @@ figure ul {
   }
 
   li:nth-child(4n) > div:nth-child(-n+2) {
-    border-right: none;
+    border-right: 2px solid white;
   }
 
   li:nth-child(4n) > div:nth-last-child(-n + 2) {
-    border-right: none;
+    border-right: 2px solid white;
   }
 
   
@@ -53,7 +58,7 @@ figure ul {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: black;
     position: absolute;
     top: 50%;
@@ -61,7 +66,8 @@ figure ul {
 
   .clef {
     position: absolute;
-    left: 40px;
+    /* left: 40px; */
+    margin-left: -70px;
     height: 200px;
     width: 120px;
   }

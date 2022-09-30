@@ -26,13 +26,11 @@
 }
 
 .functionalButtons {
-    width: 900px;
     display: flex;
     align-items: center;
     padding-top: 20px;
-    justify-content: space-between;
-    position: absolute;
-    right: 330px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 #instrumentSelector {
@@ -102,10 +100,7 @@
 }
 
 #resetButton {
-    /* margin-left: 50px;
-    margin-right: 150px; */
-    margin-left: 250px;
-    /* background-color: #5496BF; */
+    margin-left: 150px;
     height: 60px;
     width: 60px;
     padding: 0.5rem 0.5rem 0.5rem;
@@ -118,10 +113,6 @@
 }
 
 #playButton {
-    /* position: absolute;
-    left: 625px; */
-    /* margin-left: 50px;
-    margin-right: 100px; */
     background-color: #5496BF;
     height: 90px;
     width: 90px;
@@ -131,7 +122,8 @@
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     --neon-border-color: #D705F2;
-    animation: flicker 100000s infinite alternate;     
+    animation: flicker 100000s infinite alternate;
+    margin: 0px 50px;
 }
 
 #github {

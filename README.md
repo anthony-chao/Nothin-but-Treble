@@ -1,4 +1,4 @@
-# :musical_score: Nothin' but Treble: A Treblesome Music Sheet
+# :musical_score: Nothin' but Treble
 Link to the live site: https://anthony-chao.github.io/Nothin-but-Treble/
 
 ## Background
