@@ -14,13 +14,13 @@
     <div>
         <div class="wrapper">
           <button id="instructionsButton">Instructions</button>
-          <span id="instructionsPopUp">Welcome to Nothin' but Treble! 
+          <!-- <span id="instructionsPopUp">Welcome to Nothin' but Treble! 
             <br/><br/>  Some background on music sheets: you can place music notes onto the sheet and notes will be played from left to right.
             This music sheet is in a 4/4 time signature, which means there are four beats on one bar. It is also in treble clef, which is used to notate higher sounding notes.
             <br/><br/> Start off by grabbing a Quarter Note (which is 1 beat) and place it on the Music Sheet.
             You can only place one note on each beat, and four beats in one bar. Once you're satisfied with your notes, select an instrument and click Play.
             Name your masterpiece after you're done!
-          </span>
+          </span> -->
           <div class="neon-wrapper">
             <div class="neon-text">Nothin' <br>but Treble</div>
           </div>
@@ -57,34 +57,23 @@
         </div> -->
         
         <div class="functionalButtons">
-          <!-- <button id="resetButton">Reset Music Sheet</button> -->
           <input type="image" id="resetButton" src="./src/images/resetButton.png" />
-
-          <!-- <button id="playButton">Play</button> -->
           <input type="image" id="playButton" src="./src/images/playButton.png">
-        <!-- this is backup in case reset button doesn't work-->
-        <!-- <button id="resetButton" onClick="window.location.reload();">Reset Music Sheet</button>  -->
-        
-        <!-- <label for="" id="instrumentLabel">Instrument Selector</label> -->
-        <!-- <select name="instrumentSelector" id="instrumentSelector">
-          <option value="saxophone" selected="select">Saxophone</option>
-          <option value="trumpet">Trumpet</option>
-          <option value="clarinet">Clarinet</option>
-        </select> -->
-        <form action="" id="instrumentSelector">
-          <label>
-              <input type="radio" name="radiobutton" value="clarinet" checked="checked">
-              <img src="./src/images/clarinet.png" alt="">
-          </label>
-          <label>
-              <input type="radio" name="radiobutton" value="trumpet">
-              <img src="./src/images/trumpet.png" alt="">
-          </label>
-          <label>
-              <input type="radio" name="radiobutton" value="saxophone">
-              <img src="./src/images/saxophone.png" alt="">
-          </label>
-        </form>
+
+          <form action="" id="instrumentSelector">
+            <label>
+                <input type="radio" name="radiobutton" value="clarinet" checked="checked">
+                <img src="./src/images/clarinet.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="radiobutton" value="trumpet">
+                <img src="./src/images/trumpet.png" alt="">
+            </label>
+            <label>
+                <input type="radio" name="radiobutton" value="saxophone">
+                <img src="./src/images/saxophone.png" alt="">
+            </label>
+          </form>
         </div>
       </div>  <!-- this is the closing Div for the belowMusicSheet class-->
         
@@ -135,8 +124,31 @@
           <audio src="./src/mp3files/clarinet/clarinet4g.mp3" id="clarinet4g"></audio>
           <audio src="./src/mp3files/clarinet/clarinet5a.mp3" id="clarinet5a"></audio>
         </ul>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
 
+        <div class="slide">
+          <button id="close-instructions"">X</button>
+          <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+          <div>Hello there</div>
+        </div>
 
+        <div class="slide">
+          <button id="close-instructions">X</button>
+          <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+          <div>Hello there</div>
+        </div>
+
+        <div class="slide">
+          <button id="close-instructions">X</button>
+          <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+          <div>Hello there</div>
+        </div>
+
+        <button class="btn btn-next">></button>
+        <button class="btn btn-prev"><
+      </div>
     </div>
 
   </body>

@@ -1,6 +1,7 @@
 const Sheet = require("./classes/sheet.js").default;
 const Notes = require("./classes/notes.js").default;
 const Player = require("./classes/player.js").default;
+const Instructions = require("./classes/instructions.js").default;
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const noteRoot = document.querySelector(".Notes")
   const notes = new Notes(noteRoot);
   const player = new Player();
+  const instructions = new Instructions();
 
   const playButton = document.getElementById('playButton');
   let instruments = {saxophone:'saxophone', clarinet:'clarinet', trumpet:'trumpet'}
@@ -32,17 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
     player.playMusic(player.instrument);
   });
 
-  // const resetButton = document.getElementById('resetButton');
-  resetButton.addEventListener('click', () => {
-    sheet.resetMusicSheet();
-  });
-
-  // resetButton.addEventListener('click', () => {
-  //   document.location.reload(true);
-  // })
-
-  let instructionsButton = document.getElementById('instructionsButton');
-  instructionsButton.addEventListener('click',sheet.displayInstructions.bind(sheet)); 
 });
-
-

@@ -65,6 +65,22 @@ class Sheet {
         e.stopPropagation();
         return false;
       }
+
+        const resetButton = document.getElementById('resetButton');
+        resetButton.addEventListener('click', () => {
+          resetMusicSheet();
+          for (let obj in countObject) {
+            delete countObject[obj]
+          }
+        });
+
+        function resetMusicSheet(){
+          const images = document.querySelectorAll('#img');
+    
+          for (const image of images) {
+              image.parentNode.removeChild(image);
+          }
+        }
     }
     
     setupSheet() {
@@ -112,12 +128,6 @@ class Sheet {
       bar.append(clef);
   
       this.el.append(bar);
-  
-    }
-
-    displayInstructions(){
-      let instructionsButton = document.getElementById('instructionsButton');
-      instructionsButton.classList.toggle("showInstructions");
     }
 
   }

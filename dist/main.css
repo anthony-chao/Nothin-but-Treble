@@ -449,43 +449,115 @@ body {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
   \***************************************************************************************************************/
 #instructionsButton {
-    font-family: 'Exo 2', sans-serif;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    margin-bottom: 200px;
-    background-color: blue;
-    --neon-border-color: #D705F2;
-    font-size: 1.25rem;
-    font-weight: 900;
-    color: white;
-    padding: 0.25rem 0.5rem 0.5rem;
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    animation: flicker 10000s infinite alternate;    
+  font-family: 'Exo 2', sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 200px;
+  background-color: blue;
+  --neon-border-color: #D705F2;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: white;
+  padding: 0.25rem 0.5rem 0.5rem;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  animation: flicker 10000s infinite alternate;    
 }
 
-#instructionsPopUp {
-    /* visibility: hidden; */
-    font-family: 'Exo 2', sans-serif;
-    opacity: 0%;
-    width: 500px;
-    height: 200px;
-    padding: 5px;
+.slider-container {
+    background-color:rgba(0,0,0,.75);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    transition: .3s;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .slide {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide button {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 5px;
+    margin-left: 765px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .slide button:hover {
+    background-color: purple;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+
+  .slide div {
+    width: 100%;
+    height: 20%;
     background-color: white;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 6px;
-    left: 10px;
-    margin-top: 90px;
+  }
+  
+  .btn {
     position: absolute;
-    z-index: 1;
-    transition: opacity,1s;
-    
-}
-
-.showInstructions ~ #instructionsPopUp {
-    opacity: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn-prev {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 230px;
+  }
+  
+  .btn-next {
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 230px;
+  }
+  
+.invisible {
+    display: none;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
