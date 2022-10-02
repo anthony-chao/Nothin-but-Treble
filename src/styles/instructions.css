@@ -80,9 +80,8 @@
   }
 
   .slide img {
-    width: 650px;
-    height: 400px;
-    /* object-fit: cover; */
+    width: 600px;
+    height: 350px;
   }
 
   .instructions-image {
