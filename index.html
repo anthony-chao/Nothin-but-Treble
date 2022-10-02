@@ -14,16 +14,10 @@
     <div>
         <div class="wrapper">
           <button id="instructionsButton">Instructions</button>
-          <!-- <span id="instructionsPopUp">Welcome to Nothin' but Treble! 
-            <br/><br/>  Some background on music sheets: you can place music notes onto the sheet and notes will be played from left to right.
-            This music sheet is in a 4/4 time signature, which means there are four beats on one bar. It is also in treble clef, which is used to notate higher sounding notes.
-            <br/><br/> Start off by grabbing a Quarter Note (which is 1 beat) and place it on the Music Sheet.
-            You can only place one note on each beat, and four beats in one bar. Once you're satisfied with your notes, select an instrument and click Play.
-            Name your masterpiece after you're done!
-          </span> -->
           <div class="neon-wrapper">
             <div class="neon-text">Nothin' <br>but Treble</div>
           </div>
+          <div class="glowing-box"></div>
           <div class="note-box">
           <figure class="Notes"></figure>
           <p>Drag the Note!</p>
@@ -127,23 +121,32 @@
     </div>
     <div class="slider-container">
       <div class="slider">
-
+        <button id="close-instructions"">X</button>
         <div class="slide">
-          <button id="close-instructions"">X</button>
-          <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
-          <div>Hello there</div>
+          <span>1 / 3</span>
+          <div class="instructions-image">
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/le10tF_3YWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="instructions-description">
+            <h1>Welcome to Nothin' but Treble!</h1>
+            <p>Nothin' but Treble is an interactive music sheet where you can drag and drop quarter notes onto a music sheet, and play said notes. Before we get started, if you do not have a music background, please watch this video to familarize yourself with the basics of writing music!</p>
+          </div>
         </div>
 
         <div class="slide">
-          <button id="close-instructions">X</button>
-          <img src="https://source.unsplash.com/random?landscape,night" alt="" />
-          <div>Hello there</div>
+          <span>2 / 3</span>
+          <div class="instructions-image">
+            <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+          </div>
+          <p>Hello</p>
         </div>
 
         <div class="slide">
-          <button id="close-instructions">X</button>
-          <img src="https://source.unsplash.com/random?landscape,city" alt="" />
-          <div>Hello there</div>
+          <span>3 / 3</span>
+          <div class="instructions-image">
+            <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+          </div>
+          <p>Hello</p>
         </div>
 
         <button class="btn btn-next">></button>

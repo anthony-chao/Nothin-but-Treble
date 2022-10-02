@@ -2,11 +2,9 @@ li > div > .movingNotes {
     cursor: pointer;
     position: relative;
     right: 25%;
-    /* left: -25%; */
     height: 100px;
     width: 40px;
     z-index: 1000;
-    /* margin-left: 10px; */
     bottom: 75px;
 }
 
@@ -20,12 +18,46 @@ li > div > .movingNotes {
 
 .note-box {
     position: absolute;
-    right: 250px;
-    background-image: url(../src/images/poster.png);
+    margin-left: 50%;
     background-size: 150px;
-    width: 140px;
-    height: 150;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #c3b1e1;
+    animation: flicker 10000s infinite alternate;
 }
+
+.glowing-box {
+    position: absolute;
+    margin-left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow),
+      linear-gradient(#262626, #141414);
+    animation: rotate 1.5s linear infinite;
+  }
+  
+  .box:before,
+  .box:after {
+    content: " ";
+    position: absolute;
+    inset: 8px;
+    background: linear-gradient(#161616, #262626);
+    border-radius: inherit;
+  }
+  
+  .box:before {
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow);
+    filter: blur(32px);
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
 
 .note-box > p {
     font-family: 'Exo 2', sans-serif;
@@ -41,7 +73,7 @@ li > div > .movingNotes {
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
-    animation: flicker 10000s infinite alternate;    
+    animation: flicker 10000s infinite alternate;
 }
 
 .notes {

@@ -6,6 +6,10 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css ***!
   \***********************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
+  \***************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap);
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/css_reset.css ***!
   \********************************************************************************************************/
@@ -308,11 +312,9 @@ li > div > .movingNotes {
     cursor: pointer;
     position: relative;
     right: 25%;
-    /* left: -25%; */
     height: 100px;
     width: 40px;
     z-index: 1000;
-    /* margin-left: 10px; */
     bottom: 75px;
 }
 
@@ -326,12 +328,46 @@ li > div > .movingNotes {
 
 .note-box {
     position: absolute;
-    right: 250px;
-    background-image: url(../src/images/poster.png);
+    margin-left: 50%;
     background-size: 150px;
-    width: 140px;
-    height: 150;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #c3b1e1;
+    animation: flicker 10000s infinite alternate;
 }
+
+.glowing-box {
+    position: absolute;
+    margin-left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow),
+      linear-gradient(#262626, #141414);
+    animation: rotate 1.5s linear infinite;
+  }
+  
+  .box:before,
+  .box:after {
+    content: " ";
+    position: absolute;
+    inset: 8px;
+    background: linear-gradient(#161616, #262626);
+    border-radius: inherit;
+  }
+  
+  .box:before {
+    background: linear-gradient(45deg, transparent, transparent 40%, yellow);
+    filter: blur(32px);
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
 
 .note-box > p {
     font-family: 'Exo 2', sans-serif;
@@ -347,7 +383,7 @@ li > div > .movingNotes {
     padding: 0.25rem 0.5rem 0.5rem;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
-    animation: flicker 10000s infinite alternate;    
+    animation: flicker 10000s infinite alternate;
 }
 
 .notes {
@@ -385,7 +421,6 @@ figure ul {
     height: 195px;
     opacity: 1;
     border: 10px red solid;
-    /* padding: 1rem 1rem 1.5rem; */
     border: 0.5rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10s infinite alternate;   
@@ -415,7 +450,6 @@ figure ul {
     display: inline-block;
     width: 100px;
     height: 15px;
-    /* background: white; */
     background-color: white;
   }
 
@@ -446,7 +480,7 @@ body {
   background-size: cover;
 }
 /*!***************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (1) ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/instructions.css (2) ***!
   \***************************************************************************************************************/
 #instructionsButton {
   font-family: 'Exo 2', sans-serif;
@@ -463,6 +497,7 @@ body {
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   animation: flicker 10000s infinite alternate;    
+  cursor: pointer;
 }
 
 .slider-container {
@@ -487,44 +522,78 @@ body {
     height: 500px;
     position: relative;
     overflow: hidden; 
+    background-color: #c3b1e1;
+    border-radius: 24px;
   }
   
-  .slide {
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
-    position: absolute;
-    transition: all 0.5s;
-  }
-  
-  .slide button {
-    position: absolute;
-    margin-left: 770px;
-    margin-top: 5px;
-    margin-left: 765px;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
+  #close-instructions {
+      position: absolute;
+      margin-top: 5px;
+      margin-left: 750;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 999;
   }
 
-  .slide button:hover {
+  #close-instructions:hover {
     background-color: purple;
   }
 
-  .slide img {
+  .slide {
+    position: absolute;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 80%;
-    object-fit: cover;
+  }
+  
+  .slide span {
+    margin-right: 730px;
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
   }
 
-  .slide div {
-    width: 100%;
-    height: 20%;
-    background-color: white;
+  .slide img {
+    width: 650px;
+    height: 400px;
+    /* object-fit: cover; */
+  }
+
+  .instructions-image {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .instructions-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .instructions-description h1 {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .instructions-description p {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0px 20px;
+    text-align: center;
   }
   
   .btn {

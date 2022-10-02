@@ -16,7 +16,6 @@ figure ul {
     height: 195px;
     opacity: 1;
     border: 10px red solid;
-    /* padding: 1rem 1rem 1.5rem; */
     border: 0.5rem solid #fff;
     border-radius: 2rem;
     animation: flicker 10s infinite alternate;   
@@ -46,7 +45,6 @@ figure ul {
     display: inline-block;
     width: 100px;
     height: 15px;
-    /* background: white; */
     background-color: white;
   }
 
