@@ -14,8 +14,10 @@ In Treble Sheet, users will be able to:
 ![](https://github.com/anthony-chao/Nothin-but-Treble/blob/main/src/images/music.gif)
 
 ## Code Snippets
-To play the notes that are placed onto the music sheet, all the possible note containers are iterated through to determine if there is a note in a beat. If there is a note placed on the music sheet (appended to a note container), that specific note would be pushed into an array. The note that is pushed onto the array depends on which note container the note is in and which instrument is selected. Once all the notes are in the array, the notes are iterated and played using the setTimeout function so that each note is equally spaced.
+To play the notes that are placed onto the music sheet, all the possible note containers are iterated through to determine if there is a note in a beat. If there is a note placed on the music sheet (appended to a note container), that specific note would be pushed into an array. The note that is pushed onto the array depends on which note container the note is in and which instrument is selected. Once all the notes are in the array, the notes are iterated and played using the setTimeout function so that each note is equally spaced. The inbuilt JavaScript play() method was used to render the notes.
 ```
+this.containers = document.querySelectorAll('.droppable');
+
 const notesToBePlayed = [];
 
 for (const container of this.containers) {
@@ -29,7 +31,6 @@ for (let i = 0; i < notesToBePlayed.length; i++) {
     (function(i) {
         setTimeout(function() {
             rowToNote[notesToBePlayed[i]].play();
-            console.log(rowToNote[notesToBePlayed[i]]);
         }, 800 * i);
     })(i);
 }

@@ -68,7 +68,6 @@ class Player {
             (function(i) {
                 setTimeout(function() {
                     rowToNote[notesToBePlayed[i]].play();
-                    console.log(rowToNote[notesToBePlayed[i]]);
                 }, 800 * i);
             })(i);
         }
